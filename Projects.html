@@ -17,6 +17,7 @@
 
   <!-- Vendor CSS Files -->
   <!-- Font Awesome Icon Library -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
@@ -26,50 +27,314 @@
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
-<style>
- @media screen and (min-width: 701px) and (max-width:3000px){
-.avatar {
-  margin-left: 20px;
-  vertical-align: middle;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
- }
- @media screen and (min-width: 0px) and (max-width:700px){
-.avatar {
-display: none;
-}
- }
-</style>
+  <link href="Projects.css" rel="stylesheet">
+  <style>
+    @media screen and (min-width: 701px) and (max-width:3000px){
+   .avatar {
+     margin-left: 10px;
+     vertical-align: middle;
+     margin-bottom: 20px;
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+   }
+   .avatar2{
+     vertical-align: middle;
+     
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+   }
+    }
+    @media screen and (min-width: 0px) and (max-width:700px){
+   .avatar {
+   display: none;
+   }
+    }
+   </style>
 </head>
 
 <body>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
-    <div class=" d-flex align-items-center">
-      <h1 class="logo me-auto" style="margin-left: 100px;"><a href="index.html">HireBook</a></h1>
+    <div class="container d-flex align-items-center">
+      <h1 class="logo me-auto title" ><a href="index.html">HireBook<br/><span style="font-size: 15px;" class="typed" data-typed-items="By the Indians,For the Indians"></span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      <nav class="nav-menu d-none d-lg-block">
+      <nav  class="nav-menu d-none d-lg-block">
         <ul>
-          <li ><a href="index.html">Home</a></li>
-          <li><a href="freelancers.html">Freelancers</a></li>
-          <li class="active"><a href="Projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li ><a href="index.html" style="font-family:poppins ; font-weight: 500; font-size: medium;">Home</a></li>
+          <li><a href="freelancers.html" style="font-family:poppins ; font-weight: 500;font-size: medium;">Freelancers</a></li>
+          <li class="active"><a href="Projects.html" style="font-family:poppins ; font-weight: 500;font-size: medium;">Projects</a></li>
+          <li><a href="contact.html" style="font-family:poppins ; font-weight: 500;font-size: medium;">Contact</a></li>
+          <li><a href="ProjectEdit.html" style="font-family:poppins ;font-size: medium;margin-bottom:10px;color: coral; font-weight: bolder;font-size: larger;"><b>Post a Project</b></a></li>
+          <li><a href="GigEdit.html" style="font-family:poppins ;font-size: medium;margin-bottom:10px;color: coral;font-weight: bolder;font-size: larger"><b>Create a gig</b></a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
-
-    <a href="Profile.html"> <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar"></a> 
+     <!-- Example single danger button -->
+<div class="btn-group avatar" >
+  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar2">
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="Profile.html">Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="index.html">Log Out</a>
+  </div>
+</div>
+    <!-- <a href="Profile.html"> <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar"></a>  -->
     </div>
   </header><!-- End Header -->
 
   <main id="main">
-<section style="height: 100vh;">
+<section >
     <br/>
-   <h1>This is projects page</h1>
+   <div class="Project_view_all">
+    <br/><br/>
+     <div class="row">
+       <div class="col-xl-3 col-sm-12">
+         <br>
+    <div class="card">
+         <div class="title text-center">
+          <p><i class="bx bx-sort-down"></i>Filters</p>
+          <hr/>
+        </div>
+        <div class="row">
+          <div class="form-group col-12">
+            <label for="Date"><b>Choose date:</b></label><br/>
+            <input class="form-control" type="date" placeholder="Choose Date">
+          </div>
+          <div class="form-group col-12">
+            <label for="Amount"><b>Amount:</b></label><br/>
+            <input class="form-control" type="number" placeholder="Enter Amount">
+          </div>
+          <div class="form-group col-12">
+            <label for="Duration"><b>Max Duration</b></label><br/>
+            <select id="inputState" class="form-control">
+              <option >1 month</option>
+              <option>2 months</option>
+              <option>3 months</option>
+              <option >4 month</option>
+              <option>5 months</option>
+              <option>6 months</option>
+            </select>
+          </div>
+          <div class="form-group col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                <b>Long-term Projects</b>
+              </label>
+            </div>
+          </div>
+          <div class="form-group col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                <b>Short-term Projects</b>
+              </label>
+            </div>
+          </div>
+        </div>
+        </div>
+       </div>
+       
+       <div class="col-xl-9 col-sm-12">
+         <div class="row">
+        <div class="col-12">
+         <div class="card">
+            <div class="row">
+              <div class="col-8">
+                  <p><b>Business Development (Sales)</b><br/>
+                  <span><b>SkillArena</b></span></p>
+                  <div class="work_From_home"> 
+                    <p><a href="#" class="home"><i class="bx bx-home-alt"></i>Work from home</a></p>
+                  </div>
+              </div>
+              <div class="col-4">
+                <div class="float-right">
+                <img src="https://internshala.com/cached_uploads/logo%2F5fdf9c93a5cbc1608490131.jpg"/>
+                </div>
+              </div>
+            </div>
+            <div class="row Project-Details">
+              <div class="col">
+                <p><a href="#" class="startDate"><i class="bx bx-paper-plane"></i>START DATE</a>
+                <br/><span>Immediately</span></p>
+              </div>
+              <div class="col">
+                <p><a href="#" class="startDate"><i class="bx bx-calendar-event"></i>DURATION</a>
+                <br/><span>1 month</span></p>
+              </div>
+              <div class="col">
+                <p><a href="#" class="startDate"><i class="bx  bx-rename"></i>STIPEND</a>
+                <br/><span>₹3000/month</span></p>
+              </div>
+              <div class="col">
+                <p><a href="#" class="startDate"><i class="bx bx-time"></i>APPLY BY</a>
+                <br/><span>1 Mar'21</span></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3"></div>
+            <div class="col-8">
+              <div class="float-right">
+                <p class="link"><a href="#" class="startDate">View Details<i class="bx bx-right-arrow-alt"></i></a></p>
+            </div>
+            </div>
+            </div>
+         </div>
+        
+        
+        </div>
+       
+        <div class="col-12">
+          <div class="card">
+             <div class="row">
+               <div class="col-8">
+                   <p><b>Business Development (Sales)</b><br/>
+                   <span><b>SkillArena</b></span></p>
+                   <div class="work_From_home"> 
+                     <p><a href="#" class="home"><i class="bx bx-home-alt"></i>Work from home</a></p>
+                   </div>
+               </div>
+               <div class="col-4">
+                 <div class="float-right">
+                 <img src="https://internshala.com/cached_uploads/logo%2F5fdf9c93a5cbc1608490131.jpg"/>
+                 </div>
+               </div>
+             </div>
+             <div class="row Project-Details">
+               <div class="col">
+                 <p><a href="#" class="startDate"><i class="bx bx-paper-plane"></i>START DATE</a>
+                 <br/><span>Immediately</span></p>
+               </div>
+               <div class="col">
+                 <p><a href="#" class="startDate"><i class="bx bx-calendar-event"></i>DURATION</a>
+                 <br/><span>1 month</span></p>
+               </div>
+               <div class="col">
+                 <p><a href="#" class="startDate"><i class="bx  bx-rename"></i>STIPEND</a>
+                 <br/><span>₹3000/month</span></p>
+               </div>
+               <div class="col">
+                 <p><a href="#" class="startDate"><i class="bx bx-time"></i>APPLY BY</a>
+                 <br/><span>1 Mar'21</span></p>
+               </div>
+             </div>
+             <div class="row">
+               <div class="col-3"></div>
+             <div class="col-8">
+               <div class="float-right">
+                 <p class="link"><a href="#" class="startDate">View Details<i class="bx bx-right-arrow-alt"></i></a></p>
+             </div>
+             </div>
+             </div>
+          </div>
+         
+         
+         </div>
+         <div class="col-12">
+          <div class="card">
+             <div class="row">
+               <div class="col-8">
+                   <p><b>Business Development (Sales)</b><br/>
+                   <span><b>SkillArena</b></span></p>
+                   <div class="work_From_home"> 
+                     <p><a href="#" class="home"><i class="bx bx-home-alt"></i>Work from home</a></p>
+                   </div>
+               </div>
+               <div class="col-4">
+                 <div class="float-right">
+                 <img src="https://internshala.com/cached_uploads/logo%2F5fdf9c93a5cbc1608490131.jpg"/>
+                 </div>
+               </div>
+             </div>
+             <div class="row Project-Details">
+               <div class="col">
+                 <p><a href="#" class="startDate"><i class="bx bx-paper-plane"></i>START DATE</a>
+                 <br/><span>Immediately</span></p>
+               </div>
+               <div class="col">
+                 <p><a href="#" class="startDate"><i class="bx bx-calendar-event"></i>DURATION</a>
+                 <br/><span>1 month</span></p>
+               </div>
+               <div class="col">
+                 <p><a href="#" class="startDate"><i class="bx  bx-rename"></i>STIPEND</a>
+                 <br/><span>₹3000/month</span></p>
+               </div>
+               <div class="col">
+                 <p><a href="#" class="startDate"><i class="bx bx-time"></i>APPLY BY</a>
+                 <br/><span>1 Mar'21</span></p>
+               </div>
+             </div>
+             <div class="row">
+               <div class="col-3"></div>
+             <div class="col-8">
+               <div class="float-right">
+                 <p class="link"><a href="#" class="startDate">View Details<i class="bx bx-right-arrow-alt"></i></a></p>
+             </div>
+             </div>
+             </div>
+          </div>
+         
+         
+         </div>
+        
+         <div class="col-12">
+           <div class="card">
+              <div class="row">
+                <div class="col-8">
+                    <p><b>Business Development (Sales)</b><br/>
+                    <span><b>SkillArena</b></span></p>
+                    <div class="work_From_home"> 
+                      <p><a href="#" class="home"><i class="bx bx-home-alt"></i>Work from home</a></p>
+                    </div>
+                </div>
+                <div class="col-4">
+                  <div class="float-right">
+                  <img src="https://internshala.com/cached_uploads/logo%2F5fdf9c93a5cbc1608490131.jpg"/>
+                  </div>
+                </div>
+              </div>
+              <div class="row Project-Details">
+                <div class="col">
+                  <p><a href="#" class="startDate"><i class="bx bx-paper-plane"></i>START DATE</a>
+                  <br/><span>Immediately</span></p>
+                </div>
+                <div class="col">
+                  <p><a href="#" class="startDate"><i class="bx bx-calendar-event"></i>DURATION</a>
+                  <br/><span>1 month</span></p>
+                </div>
+                <div class="col">
+                  <p><a href="#" class="startDate"><i class="bx  bx-rename"></i>STIPEND</a>
+                  <br/><span>₹3000/month</span></p>
+                </div>
+                <div class="col">
+                  <p><a href="#" class="startDate"><i class="bx bx-time"></i>APPLY BY</a>
+                  <br/><span>1 Mar'21</span></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-3"></div>
+              <div class="col-8">
+                <div class="float-right">
+                  <p class="link"><a href="#" class="startDate">View Details<i class="bx bx-right-arrow-alt"></i></a></p>
+              </div>
+              </div>
+              </div>
+           </div>
+          
+          
+          </div>
+      </div>
+      </div>
+      
+     </div>
+   </div>
 </section>
   </main>
   <!-- End #main -->
@@ -99,7 +364,9 @@ display: none;
 
   <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
   <div id="preloader"></div>
-
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -109,7 +376,7 @@ display: none;
   <script src="assets/vendor/counterup/counterup.min.js"></script>
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
